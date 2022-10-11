@@ -1,0 +1,87 @@
+%----------------------------------------------------------------------------------------
+%	VALUES FOR THE THESIS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\name}{Johannes Florian Hevler} % Author name
+\newcommand{\thesistitle}{STRUCTURAL CHARACTERISTICS OF MITOCHONDRIAL PROTEIN ASSEMBLIES PROBED BY MASS SPECTROMETRY} % Title of the thesis
+\newcommand{\submissiondate}{October, 2022} % Submission date "Month, year"
+\newcommand{\Promotor}{Albert J. R. Heck} % Supervisor name
+\newcommand{\CoPromotor}{} % Co-Supervisor name, comment this line if there is none
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY STYLE (pick the style you want)
+%----------------------------------------------------------------------------------------
+\usepackage{chapterbib}
+\usepackage[sectionbib,numbers,sort&compress,merge,round]{natbib} % for bibliography - Square brackets, citing references with numbers, citations sorted by appearance in the text and compressed (as in [4-7])
+\usepackage{multicol}
+
+\bibliographystyle{Style_settings/bibstyle_pnas} % You may use a different style adapted to your field
+\renewcommand{\bibpreamble}{\begin{multicols}{2}}
+\renewcommand{\bibpostamble}{\end{multicols}}
+\setlength{\bibsep}{0.0pt}
+\renewcommand{\bibsection}{} % Remove header
+\renewcommand\bibfont{\normalfont\sffamily\fontsize{6}{8}\selectfont} % set font to be sans serif
+
+%----------------------------------------------------------------------------------------
+%   Page settings
+%----------------------------------------------------------------------------------------
+
+%% Abstract and keywords
+\newenvironment{abstract101}{%
+\begin{minipage}[t]{1cm}\bf%
+\center
+\begin{sideways}{\Large{\textbf{Abstract}}}\end{sideways}
+\vline
+\end{minipage}
+\begin{minipage}[b]{12cm}\it
+}{%
+\end{minipage}
+\normalsize\rm
+\mbox{}\par
+\mbox{}\par
+\mbox{}\par
+}
+
+%% Lowercase Text start
+\def\PARstart#1#2{\begingroup\def\par{\endgraf\endgroup\lineskiplimit=0pt}
+    \setbox2=\hbox{\lowercase{#2}}\newdimen\tmpht \tmpht \ht2
+    \advance\tmpht by \baselineskip\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}}
+    \count7=\tmpht \count8=\ht1\divide\count8 by 1000 \divide\count7 by\count8
+    \tmpht=.001\tmpht\multiply\tmpht by \count7\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}} \noindent \hangindent1.05\wd1
+    \hangafter=-2 {\hskip-\hangindent \lower1\ht1\hbox{\raise1.0\ht2\copy1}%
+    \kern-0\wd1}\copy2\lineskiplimit=-1000pt}
+\endinput
+
+%% Figure caption style
+\DeclareCaptionFormat{smallformat}{\normalfont\sffamily\fontsize{7}{9}\selectfont#1#2#3}
+\DeclareCaptionFormat{largeformat}{\normalfont\sffamily\fontsize{9}{12}\selectfont#1#2#3}
+\captionsetup*{format=smallformat}
+
+%----------------------------------------------------------------------------------------
+%	YOUR PACKAGES (be careful of package interaction)
+%----------------------------------------------------------------------------------------
+
+\usepackage{amsthm,amsmath,amssymb,amsfonts,bbm}% Math symbols
+
+%----------------------------------------------------------------------------------------
+%	YOUR DEFINITIONS AND COMMANDS
+%----------------------------------------------------------------------------------------
+
+% New Commands
+\newcommand{\bea}{\begin{eqnarray}} % Shortcut for equation arrays
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\e}[1]{\times 10^{#1}}  % Powers of 10 notation
+
+% Defining a theorem box for Criteria
+\newtheorem{critere}{Criterion}
+\newcommand{\crit}[2]{
+\begin{center}  
+\fbox{ \begin{minipage}[c]{0.9 \textwidth}
+\begin{critere}
+\textbf{\textup{ #1}} --- #2
+\end{critere}
+\end{minipage}  } \end{center}
+}

@@ -1,0 +1,3 @@
+#Aesthatics
+1 - add hyperlinked figure labels to text like so: (\textbf{\autoref{fig:fig3}E}) (done)
+2 - figure out appendix figure numbering
