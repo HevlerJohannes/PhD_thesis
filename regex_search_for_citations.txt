@@ -1,0 +1,3 @@
+search (ctrl+shift+f): \((\w+) et al., (\d+)\)
+replace \cite{$1_$2} 
+(be careful always doubke check by searching for et al)
