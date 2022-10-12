@@ -15,6 +15,7 @@
 \usepackage{setspace} % For double spacing
 \usepackage{appendix}
 
+
 \newcommand{\numberedchapter}{ % Preparation for numbered chapters
 	\cleardoublepage % To make sure the previous headers are passed
 	\fancyhead[RE]{{\bfseries \leftmark}}% Headers for left pages
@@ -31,7 +32,7 @@
 \usepackage{hyperref} % Adds clickable links at references
 \hypersetup{hidelinks}
 
-\usepackage[switch, modulo]{lineno}
+\usepackage{lineno}
 
 %----------------------------------------------------------------------------------------
 %	Input Styles
@@ -78,7 +79,8 @@
 \mainmatter % Begin numeric (1,2,3...) page numbering
 \doublespacing % Double spacing
 \numberedchapter
-\include{Chapter.1/content}
-\include{Chapter.2/content}
-
+%\linenumbers
+%\include{Chapter.1/content}
+%\include{Chapter.2/content}
+\include{Chapter.5/content}
 \end{document}
