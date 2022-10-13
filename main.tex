@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc} % UTF8 encoding
 \usepackage[T1]{fontenc} % Font encoding
 \usepackage{graphicx} % For including images
+\usepackage{ccaption} % For caption on other site
 \usepackage{float} % For including images
 \usepackage{rotating}
 \RequirePackage[misc]{ifsym} % For the \Letter symbol
@@ -67,20 +68,19 @@
 %	LIST OF CONTENTS/FIGURES/TABLES
 %----------------------------------------------------------------------------------------
 
-\unnumberedchapter{Contents}
 \tableofcontents % Write out the Table of Contents
-
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
 %----------------------------------------------------------------------------------------
 %	THESIS MAIN TEXT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 \mainmatter % Begin numeric (1,2,3...) page numbering
 \doublespacing % Double spacing
 \numberedchapter
 %\linenumbers
-%\include{Chapter.1/content}
-%\include{Chapter.2/content}
+\include{Chapter.1/content}
+\include{Chapter.2/content}
+\include{Chapter.3/content}
 \include{Chapter.5/content}
 \end{document}
