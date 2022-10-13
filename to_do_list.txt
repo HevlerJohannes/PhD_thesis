@@ -1,3 +1,5 @@
 #Aesthatics
 1 - add hyperlinked figure labels to text like so: (\textbf{\autoref{fig:fig3}E}) (done)
-2 - figure out appendix figure numbering
+2 - figure out appendix figure numbering (done)
+3 - go through all chapters and find sub- and superscripts and add accordingly (\textsubscript{} or \textsuperscript{})
+4 - go through text and remove space between number and percent
