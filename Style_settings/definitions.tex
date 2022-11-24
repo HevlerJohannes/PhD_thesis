@@ -18,7 +18,7 @@
 
 \bibliographystyle{Style_settings/bibstyle_pnas} % You may use a different style adapted to your field
 \renewcommand{\bibpreamble}{\begin{multicols}{2}}
-\renewcommand{\bibpostamble}{\end{multicols}}
+        \renewcommand{\bibpostamble}{\end{multicols}}
 \setlength{\bibsep}{0.0pt}
 \renewcommand{\bibsection}{} % Remove header
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{6}{8}\selectfont} % set font to be sans serif
@@ -29,30 +29,49 @@
 
 %% Abstract and keywords
 \newenvironment{abstract101}{%
-\begin{minipage}[t]{1cm}\bf%
-\center
-\begin{sideways}{\Large{\textbf{Abstract}}}\end{sideways}
-\vline
-\end{minipage}
-\begin{minipage}[b]{12cm}\it
-}{%
-\end{minipage}
-\normalsize\rm
-\mbox{}\par
-\mbox{}\par
-\mbox{}\par
+    \begin{minipage}[t]{1cm}\bf%
+        \center
+        \begin{sideways}{\Large{\textbf{Abstract}}}\end{sideways}
+        \vline
+    \end{minipage}
+    \begin{minipage}[b]{12cm}\it
+        }{%
+    \end{minipage}
+    \normalsize\rm
+    \mbox{}\par
+    \mbox{}\par
+    \mbox{}\par
 }
+
+%%Abstract that fits set page layout
+\newenvironment{abstract102}{%
+    \newpage
+    \begin{minipage}[b]{0.5cm}\bf%
+        \hspace*{-0.6cm}
+        \begin{sideways}{\Large{\textbf{Abstract}}}\end{sideways}
+        \vline
+    \end{minipage}
+    \begin{minipage}[t]{11.8977267833cm}\it
+        \vspace*{-1.9cm}
+        }{%
+    \end{minipage}
+    \normalsize\rm
+    \newpage
+}
+
+%%no paragraph indentation
+\setlength{\parindent}{0cm}
 
 %% Lowercase Text start
 \def\PARstart#1#2{\begingroup\def\par{\endgraf\endgroup\lineskiplimit=0pt}
-    \setbox2=\hbox{\lowercase{#2}}\newdimen\tmpht \tmpht \ht2
-    \advance\tmpht by \baselineskip\font\hhuge=cmr10 at \tmpht
-    \setbox1=\hbox{{\hhuge #1}}
-    \count7=\tmpht \count8=\ht1\divide\count8 by 1000 \divide\count7 by\count8
-    \tmpht=.001\tmpht\multiply\tmpht by \count7\font\hhuge=cmr10 at \tmpht
-    \setbox1=\hbox{{\hhuge #1}} \noindent \hangindent1.05\wd1
-    \hangafter=-2 {\hskip-\hangindent \lower1\ht1\hbox{\raise1.0\ht2\copy1}%
-    \kern-0\wd1}\copy2\lineskiplimit=-1000pt}
+\setbox2=\hbox{\lowercase{#2}}\newdimen\tmpht \tmpht \ht2
+\advance\tmpht by \baselineskip\font\hhuge=cmr10 at \tmpht
+\setbox1=\hbox{{\hhuge #1}}
+\count7=\tmpht \count8=\ht1\divide\count8 by 1000 \divide\count7 by\count8
+\tmpht=.001\tmpht\multiply\tmpht by \count7\font\hhuge=cmr10 at \tmpht
+\setbox1=\hbox{{\hhuge #1}} \noindent \hangindent1.05\wd1
+\hangafter=-2 {\hskip-\hangindent \lower1\ht1\hbox{\raise1.0\ht2\copy1}%
+\kern-0\wd1}\copy2\lineskiplimit=-1000pt}
 \endinput
 
 %% Figure caption style
@@ -72,16 +91,16 @@
 
 % New Commands
 \newcommand{\bea}{\begin{eqnarray}} % Shortcut for equation arrays
-\newcommand{\eea}{\end{eqnarray}}
+        \newcommand{\eea}{\end{eqnarray}}
 \newcommand{\e}[1]{\times 10^{#1}}  % Powers of 10 notation
 
 % Defining a theorem box for Criteria
 \newtheorem{critere}{Criterion}
 \newcommand{\crit}[2]{
-\begin{center}  
-\fbox{ \begin{minipage}[c]{0.9 \textwidth}
-\begin{critere}
-\textbf{\textup{ #1}} --- #2
-\end{critere}
-\end{minipage}  } \end{center}
+    \begin{center}
+        \fbox{ \begin{minipage}[c]{0.9 \textwidth}
+                \begin{critere}
+                    \textbf{\textup{ #1}} --- #2
+                \end{critere}
+            \end{minipage}  } \end{center}
 }

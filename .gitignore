@@ -10,7 +10,6 @@
 *.synctex*
 *.fls
 *.fdb_latexmk
-.vscode
 *.docx
 
 
