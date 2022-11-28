@@ -16,7 +16,7 @@
 \usepackage{setspace} % For double spacing
 \usepackage{appendix}
 \usepackage{ccaption}
-
+\usepackage{lettrine}
 
 \newcommand{\numberedchapter}{ % Preparation for numbered chapters
 	\cleardoublepage % To make sure the previous headers are passed
@@ -33,9 +33,8 @@
 
 \usepackage{hyperref} % Adds clickable links at references
 \hypersetup{hidelinks}
-
 \usepackage{lineno}
-
+\usepackage{tocloft}
 %----------------------------------------------------------------------------------------
 %	Input Styles
 %----------------------------------------------------------------------------------------
@@ -68,10 +67,10 @@
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES
 %----------------------------------------------------------------------------------------
-
+\setlength{\cftbeforetoctitleskip}{0pt}
 \tableofcontents % Write out the Table of Contents
-\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
-
+\addtocontents{toc}{\vspace*{-7ex}} % Add a gap in the Contents, for aesthetics
+%\addtocontents{toc}{\cftpagenumbersoff{chapter}} %no page number for chapter title
 %----------------------------------------------------------------------------------------
 %	THESIS MAIN TEXT - CHAPTERS
 %----------------------------------------------------------------------------------------
@@ -81,9 +80,9 @@
 \numberedchapter
 %\linenumbers
 \include{Chapter.1/content}
-%\include{Chapter.2/content}
-%\include{Chapter.3/content}
-%\include{Chapter.4/content}
+\include{Chapter.2/content}
+\include{Chapter.3/content}
+\include{Chapter.4/content}
 %\include{Chapter.5/content}
 %\include{Chapter.6/content}
 %\include{Chapter.7/content}

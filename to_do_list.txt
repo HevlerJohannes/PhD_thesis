@@ -13,3 +13,4 @@ you need tp carefully re-evaluate citations from chapter 3 (6 is correct)
 
 8 correctly site chapters e.g. \textbf{\autoref{ch-1}} 
 
+9 size images of chapter cover the same 
