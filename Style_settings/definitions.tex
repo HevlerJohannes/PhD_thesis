@@ -59,6 +59,29 @@
     \newpage
 }
 
+%%Picture chapter
+\newcommand*\cleartoleftpage{%  
+    \clearpage  \ifodd\value{page}\hbox{}\newpage\fi
+}
+\newcommand*{\picturechapter}[2]{%
+    \cleartoleftpage
+    \refstepcounter{chapter}%
+    \includepdf[pages=1,
+        pagecommand={%
+                \thispagestyle{empty}%
+                \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+                \chaptermark{#1}%
+            }%
+    ]{#2}%
+    {\thispagestyle{empty}\Large\textbf{#1}}%
+}
+\newcommand*{\picturechapterr}[1]{%
+    \refstepcounter{chapter}%
+    \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+    \chaptermark{#1}%
+    {\thispagestyle{empty}\Large\textbf{#1}}%
+}
+
 %%no paragraph indentation
 \setlength{\parindent}{0cm}
 

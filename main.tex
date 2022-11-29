@@ -17,7 +17,7 @@
 \usepackage{appendix}
 \usepackage{ccaption}
 \usepackage{lettrine}
-
+\usepackage{pdfpages}
 \newcommand{\numberedchapter}{ % Preparation for numbered chapters
 	\cleardoublepage % To make sure the previous headers are passed
 	\fancyhead[RE]{{\bfseries \leftmark}}% Headers for left pages
@@ -30,7 +30,6 @@
 	\fancyhead[LO]{}}%Headers for right pages
 
 \usepackage{emptypage} % No headers on an empty page
-
 \usepackage{hyperref} % Adds clickable links at references
 \hypersetup{hidelinks}
 \usepackage{lineno}
@@ -44,8 +43,6 @@
 %----------------------------------------------------------------------------------------
 %	Start document
 %----------------------------------------------------------------------------------------
-
-
 \begin{document}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -68,6 +65,7 @@
 %	LIST OF CONTENTS/FIGURES/TABLES
 %----------------------------------------------------------------------------------------
 \setlength{\cftbeforetoctitleskip}{0pt}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %only show chapter titles in TOC
 \tableofcontents % Write out the Table of Contents
 \addtocontents{toc}{\vspace*{-7ex}} % Add a gap in the Contents, for aesthetics
 %\addtocontents{toc}{\cftpagenumbersoff{chapter}} %no page number for chapter title
@@ -75,15 +73,15 @@
 %	THESIS MAIN TEXT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
+\includepdf{Chapter.1/Figures/chapterpage.pdf}
 \mainmatter % Begin numeric (1,2,3...) page numbering
 \doublespacing % Double spacing
 \numberedchapter
-%\linenumbers
-\include{Chapter.1/content}
-\include{Chapter.2/content}
-\include{Chapter.3/content}
-\include{Chapter.4/content}
+%\include{Chapter.1/content}
+%\include{Chapter.2/content}
+%\include{Chapter.3/content}
+%\include{Chapter.4/content}
 %\include{Chapter.5/content}
-%\include{Chapter.6/content}
+\include{Chapter.6/content}
 %\include{Chapter.7/content}
 \end{document}
