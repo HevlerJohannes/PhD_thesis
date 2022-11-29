@@ -67,21 +67,21 @@
 \setlength{\cftbeforetoctitleskip}{0pt}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %only show chapter titles in TOC
 \tableofcontents % Write out the Table of Contents
-\addtocontents{toc}{\vspace*{-7ex}} % Add a gap in the Contents, for aesthetics
+\addtocontents{toc}{\vspace*{3em}} % Add a gap in the Contents, for aesthetics
 %\addtocontents{toc}{\cftpagenumbersoff{chapter}} %no page number for chapter title
 %----------------------------------------------------------------------------------------
 %	THESIS MAIN TEXT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\includepdf{Chapter.1/Figures/chapterpage.pdf}
+\includepdf{Chapter.1/Figures/chapterpage.pdf} %add Chapter cover on blank page for 1st Chapter
 \mainmatter % Begin numeric (1,2,3...) page numbering
 \doublespacing % Double spacing
 \numberedchapter
-%\include{Chapter.1/content}
-%\include{Chapter.2/content}
-%\include{Chapter.3/content}
-%\include{Chapter.4/content}
-%\include{Chapter.5/content}
+\include{Chapter.1/content}
+\include{Chapter.2/content}
+\include{Chapter.3/content}
+\include{Chapter.4/content}
+\include{Chapter.5/content}
 \include{Chapter.6/content}
-%\include{Chapter.7/content}
+\include{Chapter.7/content}
 \end{document}
