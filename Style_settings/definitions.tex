@@ -76,6 +76,18 @@
     ]{#2}%
     {\thispagestyle{empty}\Large\textbf{#1}}%
 }
+\newcommand*{\picturechapterlong}[3]{%
+    \cleartoleftpage
+    \refstepcounter{chapter}%
+    \includepdf[pages=1,
+        pagecommand={%
+                \thispagestyle{empty}%
+                \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+                \chaptermark{#1}%
+            }%
+    ]{#3}%
+    {\thispagestyle{empty}\Large\textbf{#2}}%
+}
 \newcommand*{\picturechapterr}[1]{%
     \refstepcounter{chapter}%
     \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%

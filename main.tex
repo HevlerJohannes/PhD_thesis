@@ -22,6 +22,7 @@
 	\cleardoublepage % To make sure the previous headers are passed
 	\fancyhead[RE]{{\bfseries \leftmark}}% Headers for left pages
 	\fancyhead[LO]{{\bfseries \rightmark}}}% Headers for right pages
+	
 \newcommand{\unnumberedchapter}[1]{ % Preparation for unnumbered chapters
 	\cleardoublepage % To make sure the previous headers are passed
 	\phantomsection % To make sure the table of content links to the right page
@@ -67,7 +68,7 @@
 \setlength{\cftbeforetoctitleskip}{0pt}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}} %only show chapter titles in TOC
 \tableofcontents % Write out the Table of Contents
-\addtocontents{toc}{\vspace*{3em}} % Add a gap in the Contents, for aesthetics
+\addtocontents{toc}{\vspace*{4em}} % Add a gap in the Contents, for aesthetics
 %\addtocontents{toc}{\cftpagenumbersoff{chapter}} %no page number for chapter title
 %----------------------------------------------------------------------------------------
 %	THESIS MAIN TEXT - CHAPTERS
@@ -77,11 +78,11 @@
 \mainmatter % Begin numeric (1,2,3...) page numbering
 \doublespacing % Double spacing
 \numberedchapter
-%\include{Chapter.1/content}
-%\include{Chapter.2/content}
-%\include{Chapter.3/content}
-%\include{Chapter.4/content}
-%\include{Chapter.5/content}
+\include{Chapter.1/content}
+\include{Chapter.2/content}
+\include{Chapter.3/content}
+\include{Chapter.4/content}
+\include{Chapter.5/content}
 \include{Chapter.6/content}
-%\include{Chapter.7/content}
+\include{Chapter.7/content}
 \end{document}
