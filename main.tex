@@ -35,6 +35,12 @@
 \hypersetup{hidelinks}
 \usepackage{lineno}
 \usepackage{tocloft}
+%% add thumb
+\usepackage[height={2.5cm},distance={3.5mm},topthumbmargin={auto},bottomthumbmargin={auto}]{thumbs}
+\definecolor{ultramarine}{RGB}{143,173,187}
+\newcommand{\thumbforchapter}{\addthumb{Chapter \thechapter}{\Large{\thechapter}}{white}{ultramarine}}
+
+
 %----------------------------------------------------------------------------------------
 %	Input Styles
 %----------------------------------------------------------------------------------------
@@ -56,10 +62,10 @@
 %----------------------------------------------------------------------------------------
 
 \pagestyle{fancy} % Changes the headers
-\renewcommand{\chaptermark}[1]{\markboth{Chapter \thechapter\;}{}} % Getting the chapter name right
-\renewcommand{\sectionmark}[1]{\markright{Chapter \thechapter\;}} % Getting the section name right
+\renewcommand{\chaptermark}[1]{\markboth{\large\textbf Chapter \thechapter\;}{}} % Getting the chapter name right
+\renewcommand{\sectionmark}[1]{\markright{\large\textbf Chapter \thechapter\;}} % Getting the section name right
 \fancyhf{}% Clears header and footer
-\fancyhead[RO,LE]{\thepage} % page number on the outside of headers
+\fancyfoot[RO,LE]{\large\textbf\thepage} % page number on the outside of headers
 
 
 %----------------------------------------------------------------------------------------
