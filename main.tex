@@ -38,7 +38,7 @@
 %% add thumb
 \usepackage[height={2.5cm},distance={3.5mm},topthumbmargin={auto},bottomthumbmargin={auto}]{thumbs}
 \definecolor{ultramarine}{RGB}{143,173,187}
-\newcommand{\thumbforchapter}{\addthumb{Chapter \thechapter}{\Large{\thechapter}}{white}{ultramarine}}
+\newcommand{\thumbforchapter}{\addthumb{Chapter \thechapter}{\Large{\thechapter}}{white}{gray}}
 
 
 %----------------------------------------------------------------------------------------
@@ -46,6 +46,12 @@
 %----------------------------------------------------------------------------------------
 
 \input{Style_settings/definitions}
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-1}%
+      \null%
+      \clearpage}
 
 %----------------------------------------------------------------------------------------
 %	Start document
