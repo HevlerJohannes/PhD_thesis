@@ -84,5 +84,15 @@
         "Ulrich",
         "VDAC",
         "VDACs"
-    ]
+    ],
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": true,
+    "cSpell.language": "en,nl",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[latex]": {
+        "editor.wordWrap": "on",
+    }
 }

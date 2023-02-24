@@ -38,7 +38,7 @@
 %% add thumb
 \usepackage[height={2.5cm},distance={3.5mm},topthumbmargin={auto},bottomthumbmargin={auto}]{thumbs}
 \definecolor{ultramarine}{RGB}{143,173,187}
-\newcommand{\thumbforchapter}{\addthumb{Chapter \thechapter}{\Large{\thechapter}}{white}{gray}}
+\newcommand{\thumbforchapter}{\addthumb{Chapter \thechapter}{\Large{\thechapter}}{ultramarine}{gray}} %Chapter thumbs. For printing it is wise to convert first color to white
 
 
 %----------------------------------------------------------------------------------------
@@ -90,11 +90,11 @@
 \mainmatter % Begin numeric (1,2,3...) page numbering
 \doublespacing % Double spacing
 \numberedchapter
-%\include{Chapter.1/content}
-%\include{Chapter.2/content}
-%\include{Chapter.3/content}
+\include{Chapter.1/content}
+\include{Chapter.2/content}
+\include{Chapter.3/content}
 \include{Chapter.4/content}
-%\include{Chapter.5/content}
-%\include{Chapter.6/content}
-%\include{Chapter.7/content}
+\include{Chapter.5/content}
+\include{Chapter.6/content}
+\include{Chapter.7/content}
 \end{document}

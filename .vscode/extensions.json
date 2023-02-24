@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "usernamehw.errorlens",
+        "wayou.vscode-todo-highlight",
+        "james-yu.latex-workshop"
+    ]
+}
